@@ -2,24 +2,64 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>作品紹介</title>
-        <link rel="stylesheet" href="sample.css">
+        <title>お問い合わせ</title>
+        <link rel="stylesheet" href="form.css">
     </head>
     <body>
-      <ul class="menu cf">
-        <li><a href="">Menu item</a></li>
-        <li>
-          <a href="">Menu item</a>
-          <ul class="submenu">
-            <li><a href="">Submenu item</a></li>
-            <li><a href="">Submenu item</a></li>
-            <li><a href="">Submenu item</a></li>
-            <li><a href="">Submenu item</a></li>
-          </ul>           
-        </li>
-        <li><a href="">Menu item</a></li>
-        <li><a href="">Menu item</a></li>
-        <li><a href="">Menu item</a></li>
-      </ul>
-    </body>
+    <div id="nav">
+        <ul>
+                <li><a href="home.html">メイン</a></li>
+                <li><a href="profile.html">自己紹介</a></li>
+                <li><a href="works.html">作品紹介</a></li>
+                <li><a href="items.html">使用機材</a></li>
+                <li><a href="contact.html">問合せ</a></li>
+            </ul>
+        </div>
+       
+            <video src="movies/sample.mp4" autoplay loop muted height="100%" width="100%">
+            </video>
+        <p class="lead-form">お問い合わせはこちらから！</p>
+        
+<form>
+    
+  <div class="item">
+      <label class="label">お名前※</label>
+      <input class="inputs" type="text" name="name" required 
+      >
+  </div>
+  
+  <div class="item">
+      <label class="label">メールアドレス※</label>
+    <input class="inputs" type="email" name="email" required>
+</div>
+
+<div class="item">
+    <label class="label">年齢※</label>
+    <input class="inputs" type="number" name="year-olds">
+</div>
+
+
+  <div class="item">
+      <p class="label">性別</p>
+    <div class="inputs">
+        <input id="male" type="radio" name="sex" value="male"><label for="male" >男性</label>
+        <input id="female" type="radio" name="sex" value="female"><label for="female">女性</label>
+        <input id="female" type="radio" name="sex" value="female"><label for="female">その他</label>
+    </div>
+</div>
+  
+<div class="item">
+    <label class="label">ご意見</label>
+    <textarea class="inputs"></textarea>
+</div>
+<p style="color: red;">※必ず入力してください</p>
+  <div class="btn-area">
+      <input type="submit" value="送信する"><input type="reset" value="リセット">
+    </div>
+    
+</form>
+<div id="footer">
+    <p>&copy; 20xx ○○ All Rights Reserved.</p>
+</div>
+</body>
 </html> 

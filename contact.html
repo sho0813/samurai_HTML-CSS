@@ -23,17 +23,17 @@
 <form>
     
   <div class="item">
-      <label class="label">お名前</label>
-      <input class="inputs" type="text" name="name">
+      <label class="label">お名前※</label>
+      <input class="inputs" type="text" name="name" required>
   </div>
   
   <div class="item">
-      <label class="label">メールアドレス</label>
-    <input class="inputs" type="email" name="email">
+      <label class="label">メールアドレス※</label>
+    <input class="inputs" type="email" name="email" required>
 </div>
 
 <div class="item">
-    <label class="label">年齢</label>
+    <label class="label">年齢※</label>
     <input class="inputs" type="number" name="year-olds">
 </div>
 
@@ -41,8 +41,9 @@
   <div class="item">
       <p class="label">性別</p>
     <div class="inputs">
-        <input id="male" type="radio" name="sex" value="male"><label for="male">男性</label>
-<input id="female" type="radio" name="sex" value="female"><label for="female">女性</label>
+        <input id="male" type="radio" name="sex" value="male"><label for="male" >男性</label>
+        <input id="female" type="radio" name="sex" value="female"><label for="female">女性</label>
+        <input id="female" type="radio" name="sex" value="female"><label for="female">その他</label>
     </div>
 </div>
   
@@ -50,7 +51,7 @@
     <label class="label">ご意見</label>
     <textarea class="inputs"></textarea>
 </div>
-
+<p style="color: red;">※必ず入力してください</p>
   <div class="btn-area">
       <input type="submit" value="送信する"><input type="reset" value="リセット">
     </div>
