@@ -8,6 +8,9 @@ function check(){
   }else if(form.yearolds.value==""){
       alert("年齢が入力されていません。年齢を入力してください。")
       return false;
+  }else if(isFinite(form.yearolds.value==false)){
+    alert("年齢が正しく入力されていません。正しく年齢を入力してください。")
+  return false;
   }else if(form.sex.value==""){
       alert("性別が入力されていません。性別を入力してください。")
       return false;
@@ -19,9 +22,3 @@ function check(){
   }
 }
 
-function check(){
-  if(isFinite(form.yearolds.value==false)){
-    alert("年齢が正しく入力されていません。正しく年齢を入力してください。")
-  }
-  return false;
-}
