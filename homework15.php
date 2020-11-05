@@ -1,7 +1,42 @@
 <?php
 $months=["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
-switch($months){
-  case [1]:
-  print("29日です");
-}
+$month = "2月";
+switch($month){
+  case'1月':
+  print("31日です\n");
+  break;
+  case'2月':
+  print("29日です\n");
+  break;
+  case'3月':
+  print("31日です\n");
+  break;
+  case'4月':
+  print("31日です");
+  break;
+  case'5月':
+  print("31日です");
+  break;
+  case'6月':
+  print("30日です");
+  break;
+  case'7月':
+  print("31日です");
+  break;
+  case'8月':
+  print("31日です");
+  break;
+  case'9月':
+  print("30日です");
+  break;
+  case'10月':
+  print("31日です");
+  break;
+  case'11月':
+  print("30日です");
+  break;
+  case'12月':
+  print("31日です");
+  break;
+  }
 ?>
