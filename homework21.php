@@ -1,3 +1,14 @@
 <?php
-
+$num=[60,50,90,70,80,45];
+//最小値
+print($num[5]."\n");
+//最大値
+print($num[2]."\n");
+//小さい順
+print($num[5]."\n");
+print($num[1]."\n");
+print($num[0]."\n");
+print($num[3]."\n");
+print($num[4]."\n");
+print($num[2]."\n");
 ?>
