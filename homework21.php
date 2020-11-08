@@ -1,14 +1,12 @@
 <?php
-$num=[60,50,90,70,80,45];
+$x=[60,50,90,70,80,45];
 //最小値
-print($num[5]."\n");
+$mi = $x[0];
+for ($i=1; $i<6; $i++) { if ($x[$i] < $mi) { $mi = $x[$i]; } }
+echo $mi;
 //最大値
-print($num[2]."\n");
-//小さい順
-print($num[5]."\n");
-print($num[1]."\n");
-print($num[0]."\n");
-print($num[3]."\n");
-print($num[4]."\n");
-print($num[2]."\n");
+$ma = $x[0];
+for ($i=1; $i<6; $i++) { if ($x[$i] > $ma) { $ma = $x[$i]; } }
+echo $ma;
+//降順のやり方が不明です
 ?>
