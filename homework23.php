@@ -6,23 +6,42 @@
         ['名前' => '橋本', '性別' =>'女', '数学' => 97, '国語' => 55, '英語' => 45]
     ];
 
-    //多次元配列の際max関数が使えず苦戦してます。
-    //コメント
-    //多次元配列はそのままではmax関数は使えないと思います。
-    //なればどうするのか？？それを考えていく必要があります。
-    //例えばmax関数を使うには、1次元配列出なければなりません。
-    //ということは、数字だけを抜いてきてそれを1次元配列にすると使用することができます。
-    //またmax関数を使わずとも、homework21を使ったやり方でも最大値を取得することができると思います。
-    //プログラムはやり方が1つではなく、様々なやり方があります。
-    //なので1つにやり方にとらわれるのではなく、別の観点からも解けないか考えていくと良いと思います。
+    //最大値
+    $max_math = 0;
 
-    echo max ($usr['数学']);
+    foreach($usr as $user){
+    if($max_math<$user["数学"]){
+    $max_math = $user["数学"];
+    }
+    }
+    print(($max_math)."\n");
 
-    //$mi = $usr[0]['数学'];
-    //for ($i=1; $i<count($usr); $i++) { 
-    //    if ($usr[$i]['数学'] < $mi) { 
-    //        $mi = $usr[$i];
-    //    }
-    //}
-    //echo $mi;
+    //最小値
+    $min_math = 100 ;
+
+    foreach($usr as $user){
+        if($min_math>$user["国語"]){
+        $min_math = $user["国語"];
+    }
+    }
+    print(($min_math)."\n");
+    //各科目の平均点
+    //数学
+    $sums["数学"] = array_sum(array_column($usr,"数学"));
+    foreach($sums as $key =>$val)
+
+    //国語
+    $sums["国語"] = array_sum(array_column($usr,"国語"));
+    foreach($sums as $key =>$val)
+
+    //英語
+    $sums["英語"] = array_sum(array_column($usr,"英語"));
+    foreach($sums as $key =>$val)
+    print(($val/count($usr))."\n");
+
+    //性別別各科目平均点
+    //男数学
+    
+    //男国語
+    //男英語
 ?>
