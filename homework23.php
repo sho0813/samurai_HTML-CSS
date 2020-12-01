@@ -40,8 +40,46 @@
     print(($val/count($usr))."\n");
 
     //性別別各科目平均点
-    //男数学
+    //男性
+    $math = 0;
+    $nation = 0;
+    $english = 0;
+    $count = 0;
+    foreach($usr as $user){
+        if($user["性別"] == "男"){
+            $math = $math + $user["数学"];
+            $nation = $nation + $user["国語"];
+            $english = $english + $user["英語"];
+            $count++;
+        }
+    }
+    print($math."\n");
+    print($nation."\n");
+    print($english."\n");
     
-    //男国語
-    //男英語
+    print($math/$count."\n");
+    print($nation/$count."\n");
+    print($english/$count."\n");
+    
+    //女性
+    $math2 = 0;
+    $nation2 = 0;
+    $english2 = 0;
+    $count2 = 0;
+    foreach($usr as $user){
+        if($user["性別"] == "女"){
+            $math2 = $math2 + $user["数学"];
+            $nation2 = $nation2 + $user["国語"];
+            $english2 = $english2 + $user["英語"];
+            $count2++;
+        }
+    }
+    print($math2."\n");
+    print($nation2."\n");
+    print($english2."\n");
+    
+    print($math2/$count2."\n");
+    print($nation2/$count2."\n");
+    print($english2/$count2."\n");
+    
 ?>
