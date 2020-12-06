@@ -7,35 +7,51 @@ $items=[
 ];
 
 //在庫が多い順にソートして、商品名(name)と在庫(stock)内容を表示
-//multisortを使用したい
+//ok
 foreach($items as $key => $value){
   $stock[$key] = $value['stock'];
 }
-array_multisort($stock,SORT_ARC,$items);
+array_multisort($stock,SORT_ASC,$items);
+print_r($items);
 
-//在庫が15個未満の場合の商品名表示
-$stock2= 0;
+//在庫が15個未満の場合の商品名表示ok
+$stock2= [];
 $name = 0;
 foreach($items as $item){
   if($item['stock']<15){
-    $stock2 = $item['name'];
+    $stock2[] = $item['name'];
   }
+};
+foreach($stock2 as $stocks){
+  print(($stocks)."\n");
 }
-print(($stock2)."\n");
-
 //売上(price*sales)が高い順に表示
-$proceed = 0;
+//バブルソートを使用
+$arr = [];
 foreach($items as $item){
-  if($proceed < $item['price']*$item['sales']){
-    $proceed =$item['price']*$item['sales'];
-  }
+  $arr[] = $item['price'] * $item['sales'];
 }
-print(($proceed)."\n");
- //商品名に'pen'がつく商品名と価格表示
+var_dump(bubble_sort($arr));
+    function bubble_sort($array){
+        for($i = 0; $i < count($array); $i++){
+            for($n = 1; $n < count($array); $n++){
+                if($array[$n-1] > $array[$n]){
+                    $temp = $array[$n];
+                    $array[$n] = $array[$n-1];
+                    $array[$n-1] = $temp;
+                }
+            }
+        }
+        return $array;
+    }
+//print(($proceed)."\n");
+ //商品名に'pen'がつく商品名と価格表示ok
+ $name=[];
 foreach($items as  $item){
-  if ($item['name']=='pen'){
-    $name = $item['price'];
+  if (substr($item['name'],0,3)=='pen'){
+    $name[] = $item['name'];
+    $name[] = $item['price'];
   }
 }
-print($name);
+print_r($name);
 ?>
